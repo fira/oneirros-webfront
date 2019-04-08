@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>OneiRRos Project</title>
+		{{ include('header.hyperspace.html') }}
+	</head>
+	<body class="is-preload">
+		{{ include('sidebar.hyperspace.html') }}
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+			 	{% if not session.loggedIn %}
+					{{ include ('main.start.html') }}
+					{{ include ('main.login.html') }}
+				{% else %}
+					{{ include ('main.dashboard.html') }}
+				{% endif %}
+			</div>
+
+		{{ include('footer.hyperspace.html') }}
+		{{ include('scripts.hyperspace.html') }}
+		{{ include('scripts.index.html') }}
+	</body>
+</html>

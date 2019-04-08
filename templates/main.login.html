@@ -1,0 +1,43 @@
+<section id="login" class="wrapper style1 fullscreen fade-up">
+	<div class="inner split style3">
+		<section>
+			<h2>Login</h2>
+			<form method="post" action="/api/login" id="login-form" class="ajaxFormInit">
+				<div class="fields">
+					<div class="field half">
+						<input type="text" name="user" id="user" placeholder="User"/>
+					</div>
+					<div class="field half">
+						<input type="password" name="password" id="password" placeholder="Password"/>
+					</div>	
+				</div>
+				
+				<ul class="actions">
+					<li><a href="" class="button submit half">Login</a></li>
+				<!--	<li><a href="recover" class="button half" disabled="disabled">Recover</a></li> -->
+				</ul>
+					
+			</form>
+		</section>
+		<section>
+			<h2>Register</h2>
+			<form method="post" action="/api/register" id="register-form" class="ajaxFormInit">
+				<div class="fields">
+					<div class="field">
+						<input type="text" name="reguser" id="reguser" placeholder="User" />
+					</div>
+					<div class="field">
+						<input type="password" name="regpass" id="regpass" placeholder="Password" />
+					</div>
+					<div class="field">
+						<input type="text" name="regmail" id="regmail" placeholder="Recovery E-Mail (Optional)" />
+					</div>
+				</div>
+
+				<ul class="actions">
+					<li><a href="" class="button submit half">Register</a></li>
+				</ul>
+			</form>
+		</section>
+	</div>	
+</section>

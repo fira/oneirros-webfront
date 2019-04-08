@@ -1,0 +1,23 @@
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Characters</h1>
+							<table>
+								<thead>
+									<tr>
+										<th>Character ID</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+								{% for char in charmap %}
+									<tr>
+										<td>{{ char.rrid }}</td>
+										<td></td>
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</section>

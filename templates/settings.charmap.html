@@ -1,0 +1,20 @@
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Character Mapping</h1>
+							<p>Start by mapping your characters to your account !</p>
+							<p>This works by generating a One Time Key that you paste in a certain RivalRegions chat. Our imps will automatically pick it up and associate you to the given character.</p>
+							<ul class="actions">
+								<li><a href="/dynamic/charmap.newkey.php" class="button scrolly">Generate New Key</a></li>
+								<li><a href="http://rivalregions.com/#slide/chat/war_133742" target="_blank" class="button scrolly">Chat (Desktop)</a><li>
+								<li><a href="http://m.rivalregions.com/#slide/chat/war_133742" target="_blank" class="button scrolly">Chat (Mobile)</a><li>
+								
+							</ul>
+							{% if otpkey %}
+								<h3>Current Key: {{ otpkey }}</h3>
+							{% else %}
+								<h3>You have no active verification key.</h3>
+							{% endif %}
+						</div>
+					</section>

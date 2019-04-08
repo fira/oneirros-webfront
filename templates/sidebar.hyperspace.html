@@ -1,0 +1,16 @@
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="/#intro">Welcome</a></li>
+							{% if not session.loggedIn %}
+								<li><a href="/#login">Login</a></li>
+							{% else %}
+								<li><a href="/dynamic/settings">Settings</a></li>
+								<li><a href="/dynamic/logout">Logout</a></li>
+							{% endif %}
+						</ul>
+					</nav>
+				</div>
+			</section>

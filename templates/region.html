@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>OneiRRos Project</title>
+		{{ include('header.hyperspace.html') }}
+	</head>
+	<body class="is-preload">
+		{{ include('sidebar.hyperspace.html') }}
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<section id="pagetitle" class="wrapper style1 fade-up">
+					<div class="inner">
+						<h1>Region Information</h1>
+					</div>
+				</section>
+
+				<section id="regiondata" class="wrapper style1 fade-up">						<a style="top: -2em; bottom: -2em;" href="/region/{{ region.regionid }}"><img src="http://static.rivalregions.com/static/regions_gerbs/{{region.regionid}}_big.png" style="transform: scale(0.5)"/></a>
+				<div class="inner">
+						<table>
+							<tbody>
+								<tr>
+									<td>Region ID</td>
+									<td>{{ region.regionid }}</td>
+								</tr>
+								<tr>
+									<td>Region name (Russian)</td>
+									<td>{{ region.runame }}</td>
+								</tr>
+								<tr>
+									<td>Citizens / Residents</td>
+									<td>{{ region.citizens }} / {{ region.residents }}</td>
+								</tr>
+								<tr>
+									<td>Medicine / Hospitals</td>
+									<td>
+{% if region.medindex > 6 %}
+	<span style="color: green">
+{% else %}
+	<span style="color: red">
+{% endif %}
+									{{ region.medindex }}
+</span> / {{ region.hospital }}</td>
+								</tr>
+
+							</tbody>
+						</table>
+				</div>
+				</section>
+			</div>
+
+		{{ include('footer.hyperspace.html') }}
+		{{ include('scripts.hyperspace.html') }}
+	</body>
+</html>
